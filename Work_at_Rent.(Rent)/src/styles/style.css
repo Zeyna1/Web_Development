@@ -2,7 +2,6 @@
 
 * {
     box-sizing: border-box;
-    /* font-family: 'Anuphan', sans-serif; */
 }
 
 body {
@@ -503,7 +502,7 @@ main #benefits .container .heading {
 }
 
 main #core_values .container .heading p {
-    width: 50%;
+    width: 46%;
 }
 
 main section .container .cards .card .values_img_outter {
