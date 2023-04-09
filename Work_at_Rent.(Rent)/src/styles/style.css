@@ -1,0 +1,889 @@
+@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    box-sizing: border-box;
+    /* font-family: 'Anuphan', sans-serif; */
+}
+
+body {
+    background-color: #000000;
+    color: #ffffffff;
+    font-family: "Anuphan", sans-serif;
+}
+
+/* Header & Navbar */
+header {
+    height: 80px;
+    border-bottom: 2px solid rgb(31, 30, 30);
+    position: sticky;
+    background-color: #000;
+    top: 0;
+    z-index: 1;
+}
+
+header,
+header nav,
+header nav .nav,
+header nav .nav,
+header nav .nav ul,
+header nav .buttons,
+header nav .nav ul .dropdown_list .dropdown_div .container,
+header nav .nav ul .dropdown_list .dropdown_div .container .card_area,
+header nav .nav ul .dropdown_list .dropdown_div .container .text_area ul,
+header nav .nav ul .dropdown_list .dropdown_div .container .card_area .text .heading,
+main section .container,
+main #rent_info .container .text,
+main #rent_info .container .rent_info_buttons,
+main #rent_info .container .rent_info_buttons .explore_positions-button,
+main #core_values .container .heading,
+main #benefits .container .heading,
+main section .container .cards,
+main section .container .cards .card,
+main section .container .cards .card .values,
+main section .container .cards .card .values_img_outter,
+main #life_at_rent .container .img_section,
+main #recent_news .container .cards .card a .links {
+    display: flex;
+}
+
+header nav a {
+    color: #7e93fb;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+header nav,
+main section .container,
+header nav .nav ul .dropdown_list .dropdown_div .container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 100px;
+}
+
+header nav {
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .logo a {
+    display: inline-block;
+    width: 100px;
+    height: 36px;
+}
+
+header nav .logo a img {
+    width: 100%;
+    height: 100%;
+}
+
+header nav .nav {
+    width: 856px;
+    justify-content: center;
+}
+
+header nav .nav ul li {
+    margin-right: 42px;
+}
+
+header nav .nav ul li a {
+    position: relative;
+    padding: 10px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav .nav ul li .outter:hover {
+    color: #adbbff;
+}
+
+header nav .nav ul li .outter::before {
+    content: "";
+    display: inline-block;
+    background-color: #adbbff;
+    width: 0;
+    height: 1px;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav .nav ul li .outter::after {
+    content: "";
+    display: inline-block;
+    background-color: #adbbff;
+    width: 0;
+    height: 1px;
+    position: absolute;
+    top: 30px;
+    right: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav .nav ul li .outter:hover::before {
+    content: "";
+    display: inline-block;
+    background-color: #adbbff;
+    width: 50%;
+    height: 1px;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+}
+
+header nav .nav ul li .outter:hover::after {
+    content: "";
+    display: inline-block;
+    background-color: #adbbff;
+    width: 50%;
+    height: 1px;
+    position: absolute;
+    top: 30px;
+    right: 50%;
+}
+
+header nav .buttons {
+    justify-content: space-between;
+    width: 284px;
+    align-items: center;
+}
+
+header nav .buttons a {
+    padding: 10px 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+header nav .buttons a:hover {
+    color: #adbbff;
+    text-decoration: underline;
+}
+
+header nav .buttons .getintouch-button {
+    color: #fff;
+    background-color: #4561ec;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+header nav .buttons .getintouch-button:hover {
+    text-decoration: none;
+    background-color: #22389c;
+    color: inherit;
+}
+
+header nav .nav ul .company_list {
+    position: relative;
+}
+
+header nav .nav ul .company_list:hover .company-dropdown_list,
+header nav .nav ul .dropdown_list:hover .dropdown_div {
+    display: block;
+}
+
+header nav .nav ul .company_list .company-dropdown_list {
+    position: absolute;
+    top: 30px;
+    left: -200px;
+    width: 551px;
+    padding: 10px;
+    display: none;
+    background-color: #000;
+}
+
+header nav .nav ul .company_list .company-dropdown_list ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header nav .nav ul .company_list .company-dropdown_list ul li {
+    width: 40%;
+}
+
+header nav .nav ul .company_list .company-dropdown_list ul li button {
+    display: flex;
+    font-size: 20px;
+    color: #fff;
+    line-height: 120%;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    font-weight: 700;
+}
+
+header nav .nav ul .company_list .company-dropdown_list ul li button:hover {
+    cursor: pointer;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div {
+    position: absolute;
+    top: 57px;  
+    left: 0;
+    max-width: 100%;
+    width: 100%;
+    background-color: #000;
+    display: none;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container {
+    flex-wrap: wrap;
+    padding: 50px 100px;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .text_area {
+    width: 620px;
+    flex-wrap: wrap;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .text_area {
+    flex-direction: column;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin: 30px 0;
+    width: 100%;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .text_area ul {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .text_area ul li {
+    width: calc(50% - 7px);
+    margin: 20px 0;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .text_area ul li a {
+    font-size: 20px;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .card_area {
+    width: 620px;
+    gap: 2rem;
+    position: relative;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .card_area::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 110%;
+    background-color: rgb(31, 30, 30);
+    top: -30px;
+    left: -30px;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .card_area .img a {
+    display: inline-block;
+    width: 240px;
+    height: 142px;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .card_area .img a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .card_area .text .heading {
+    justify-content: space-between;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .card_area .text {
+    width: 325px;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .card_area .text .heading span:nth-of-type(1) {
+    display: inline-block;
+    padding: 10px 12px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .card_area .text p {
+    font-size: 24px;
+    margin-top: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 2.1rem;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .card_area .text .explore {
+    margin: 20px 0;
+    text-align: start;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .card_area .text .explore a {
+    font-size: 15px;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .card_area .text .explore a:hover {
+    color: #fff;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .card_area .text .explore a i {
+    transition: all 0.3s ease-in-out;
+    font-size: 12px;
+    color: #7e93fb !important;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .card_area .text .explore a:hover i {
+    transform: translate(10px, 0);
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .explore_positions-button:hover {
+    box-shadow: 0 0 20px rgba(69, 97, 236, .8);
+}
+
+/* Main & Sections */
+/* Fixed button */
+main .fixed_button_right {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    bottom: 30px;
+    right: 0;
+    z-index: 11;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 5px rgba(69, 97, 236, .8);
+    transition: all 0.3s ease-in-out;
+}
+
+main .fixed_button_right:hover a {
+    background-color: #22389c;
+}
+
+main .fixed_button_right:hover {
+
+    box-shadow: 0 0 30px 10px rgba(69, 97, 236, .8);
+}
+
+main .fixed_button_right a {
+    padding: 18px 24px;
+    background-color: #4561EC;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+main section {
+    margin: 200px 0;
+}
+
+main #rent_info {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+main #rent_info .container,
+main #core_values .container,
+main #core_values .container .cards .card .values,
+main #benefits .container,
+main #benefits .container .cards .card,
+main #life_at_rent .container,
+main #recent_news .container,
+main #recent_news .container .cards .card {
+    flex-direction: column;
+}
+
+main #rent_info .container .text {
+    flex-direction: column;
+    row-gap: 2.5rem;
+    width: 620px;
+    margin: 220px 0 50px;
+}
+
+main #rent_info .container .text h1,
+main #core_values .container .heading h1,
+main #benefits .container .heading h1,
+main #life_at_rent .container h1,
+main #recent_news .container h1 {
+    font-size: 74px;
+    font-weight: 600;
+    line-height: 95%;
+}
+
+main #rent_info .container .text p,
+main #core_values .container .heading p,
+main #benefits .container .heading p {
+    font-size: 1rem;
+    line-height: 30px;
+    width: 454px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+main #rent_info .container .rent_info_buttons {
+    gap: 2rem;
+    margin-bottom: 100px;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .explore_positions-button,
+main #rent_info .container .rent_info_buttons .explore_positions-button,  
+main #rent_info .container .rent_info_buttons .discover_rent-button,
+main #rent_info .container .rent_info_buttons .discover_rent-button a {
+    transition: all 0.3s ease-in-out;
+}
+
+main #rent_info .container .rent_info_buttons .explore_positions-button,
+header nav .nav ul .dropdown_list .dropdown_div .container .explore_positions-button {
+    background-color: #4561ec;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+main #rent_info .container .rent_info_buttons .explore_positions-button:hover {
+    background-color: #22389c;
+}
+
+header nav .nav ul .dropdown_list .dropdown_div .container .explore_positions-button a,
+main #rent_info .container .rent_info_buttons .explore_positions-button a,
+main #job_position .container .text_area .explore_positions-button a,
+main #career .container .text .explore_positions-button a {
+    display: inline-block;
+    padding: 20px 30px;
+    text-decoration: none;
+    color: #fff !important;
+    font-weight: 500;
+}
+
+main #rent_info .container .rent_info_buttons .discover_rent-button {
+    background: none;
+    border: 1px solid #7e93fb;
+    border-radius: 5px;
+}
+
+main #rent_info .container .rent_info_buttons .discover_rent-button:hover {
+    background: none;
+    border: 1px solid #fff;
+}
+
+main #rent_info .container .rent_info_buttons .discover_rent-button:hover a {
+    color: #fff;
+}
+
+main #rent_info .container .rent_info_buttons .discover_rent-button a {
+    display: inline-block;
+    padding: 20px 25px;
+    text-decoration: none;
+    color: #7e93fb;
+    font-weight: 500;
+}
+
+/* Core values section */
+main #core_values .container .heading h1,
+main #core_values .container .heading p {
+    width: 620px;
+    align-items: center;
+    line-height: 30px;
+}
+
+main #core_values {
+    margin: 100px 0;
+}
+
+main #core_values .container .heading,
+main #benefits .container .heading {
+    margin-bottom: 50px;
+}
+
+main #core_values .container .heading p {
+    width: 50%;
+}
+
+main section .container .cards .card .values_img_outter {
+    width: 100%;
+    justify-content: center;
+}
+
+main #core_values .container .cards .card .values .values_img_outter .values_img {
+    width: 102px;
+    height: 102px;
+}
+
+main #core_values .container .cards .card .values .values_img_outter .values_img img {
+    width: 100%;
+    height: 100%;
+}
+
+main #core_values .container .cards,
+main #benefits .container .cards {
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main #core_values .container .cards .card {
+    padding: 44px 20px;
+    background-color: #4561ec;
+    border-radius: 5px;
+    position: relative;
+    width: 23.5%;
+    cursor: pointer;
+}
+
+main #core_values .container .cards .card .values {
+    width: 100%;
+    align-items: center;
+}
+
+main #core_values .container .cards .card .values .text {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 500;
+    line-height: 120%;
+    font-size: 24px;
+    width: 100%;
+}
+
+main #core_values .container .cards .card .values_position_abs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    padding: 44px 27px;
+    background-color: #4561ec;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+main #core_values .container .cards .card:hover .values_position_abs {
+    opacity: 1;
+}
+
+main #core_values .container .cards .card .values_position_abs p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+}
+
+/* Blockquote section */
+main #blockquote .container .quote_left {
+    float: left;
+}
+
+main #blockquote .container .quote_left blockquote {
+    width: 613px;
+    position: relative;
+}
+
+main #blockquote .container .quote_left blockquote::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #7e93fb;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+}
+
+main #blockquote .container .quote_left blockquote::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #7e93fb;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 40px;
+}
+
+main #blockquote .container .quote_left p {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+main #blockquote .container .quote_left span {
+    font-size: 14px;
+    color: #7e93fb;
+}
+
+main #blockquote .container .quote_left blockquote p {
+    padding-right: 60px;
+    font-size: 32px;
+    line-height: 50px;
+}
+
+main #blockquote .container .img {
+    width: 613px;
+}
+
+main #blockquote .container .img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Job Position section */
+main #job_position .container {
+    height: 483px;
+}
+
+main #job_position .container .img {
+    width: 613px;
+    height: 100%;
+}
+
+main #job_position .container .img img {
+    width: 100%;
+    height: 100%;
+}
+
+main #job_position .container .img img {
+    width: 100%;
+    height: 100%;
+}
+
+main #job_position .container .text_area {
+    background-color: #4561ec;
+    width: calc(100% - 613px);
+    padding: 50px 40px;
+}
+
+main #job_position .container .text_area h2,
+main #team .container .text h2,
+main #career .container .text h2 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+main #job_position .container .text_area p,
+main #team .container .text p,
+main #career .container .text p {
+    line-height: 30px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+main #job_position .container .text_area .explore_positions-button {
+    margin: 30px 0;
+}
+
+main #job_position .container .text_area .explore_positions-button a,
+main #career .container .text .explore_positions-button a {
+    background-color: #fff;
+    color: #4561ec !important;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* Benefits section */
+main #benefits .container .heading {
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+main #benefits .container .heading p {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 532px;
+}
+
+main #benefits .container .cards {
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+main #benefits .container .cards .card {
+    padding: 35px;
+    width: 23.5%;
+    background-color: #17181c;
+}
+
+main #benefits .container .cards .card p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 600;
+    padding: 0 20px;
+}
+
+/* Life at Rent. section */
+main #life_at_rent .container h1 {
+    margin-bottom: 30px;
+}
+
+main #life_at_rent .container .img_section {
+    width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+main #life_at_rent .container .img_section .img {
+    height: 311px;
+}
+
+main #life_at_rent .container .img_section .img:nth-of-type(1),
+main #life_at_rent .container .img_section .img:nth-of-type(2),
+main #life_at_rent .container .img_section .img:nth-of-type(7),
+main #life_at_rent .container .img_section .img:nth-of-type(8),
+main #life_at_rent .container .img_section .img:nth-of-type(13),
+main #life_at_rent .container .img_section .img:nth-of-type(14) {
+    flex: 1 0 calc((100% - 18px) / 2);
+}
+
+main #life_at_rent .container .img_section .img:nth-of-type(3),
+main #life_at_rent .container .img_section .img:nth-of-type(6),
+main #life_at_rent .container .img_section .img:nth-of-type(10),
+main #life_at_rent .container .img_section .img:nth-of-type(9),
+main #life_at_rent .container .img_section .img:nth-of-type(12) {
+    flex: 1 0 35.45%;
+}
+
+main #life_at_rent .container .img_section .img:nth-of-type(4),
+main #life_at_rent .container .img_section .img:nth-of-type(5),
+main #life_at_rent .container .img_section .img:nth-of-type(10),
+main #life_at_rent .container .img_section .img:nth-of-type(11) {
+    flex: 2 0 62.75%;
+}
+
+main #life_at_rent .container .img_section .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Team section */
+main #team .container,
+main #career .container {
+    height: 612px;
+}
+
+main #team .container .img {
+    height: 100%;
+    float: left;
+}
+
+main #team .container .img img,
+main #career .container .img img,
+main #recent_news .container .cards .card a .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main #team .container .text {
+    width: 691px;
+    background-color: #17181C;
+    padding: 90px 60px;
+}
+
+/* Career section */
+main #career {
+    background-color: #4561ec;
+    padding: 100px 0;
+}
+
+main #career .container {
+    justify-content: space-between;
+}
+
+main #career .container .img {
+    max-width: 567px;
+    width: 100%;
+}
+
+main #career .container .text {
+    max-width: 563px;
+    width: 100%;
+}
+
+main #career .container .text p {
+    font-size: larger;
+}
+
+main #career .container .text * {
+    margin-bottom: 50px !important;
+}
+
+main #career .container .text .explore_positions-button a {
+    padding: 20px 50px;
+}
+
+/* News section */
+main #recent_news {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+main #recent_news .container h1 {
+    color: #000;
+    margin: 50px 0;
+}
+
+main #recent_news .container .cards {
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+main #recent_news .container .cards .card a {
+    display: flex;
+    flex-direction: column;
+    width: 613px;
+}
+
+main #recent_news .container .cards .card a .img {
+    width: 613px;
+    height: 309px;
+    transition: all 0.3s ease-in-out;
+}
+
+main #recent_news .container .cards .card a .img:hover {
+    opacity: 0.8;
+}
+
+main #recent_news .container .cards .card a {
+    text-decoration: none;
+    color: #4561EC;
+    font-size: 14px;
+    line-height: 1rem;
+    font-weight: 600;
+}
+
+main #recent_news .container .cards .card a .links {
+    margin: 20px 0;
+    gap: 1rem;
+}
+
+main #recent_news .container .cards .card a .links div {
+    background-color: #E7EBFF;
+    padding: 10px 12px;
+    border-radius: 5px;
+}
+
+main #recent_news .container .cards .card a .links div:hover {
+    text-decoration: underline;
+}
+
+main #recent_news .container .cards .card a p {
+    color: #000;
+    font-size: 32px;
+    line-height: 35px;
+    transition: all 0.3s ease-in-out;
+}
+
+main #recent_news .container .cards .card a p:hover {
+    color: #4561ec;
+}
