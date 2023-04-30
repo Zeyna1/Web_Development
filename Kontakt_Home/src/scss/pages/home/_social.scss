@@ -1,0 +1,116 @@
+#social {
+  background-color: $color-black1;
+
+  padding-bottom: 50px;
+
+  .row {
+    gap: 30px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    .title {
+      display: flex;
+      justify-content: center;
+      font-size: $fs-900;
+      color: $color-white;
+      font-weight: $fw-700;
+      width: 100%;
+      gap: 1rem;
+      padding-top: 15px;
+    }
+
+    .videos {
+      display: flex;
+      gap: 10px;
+
+      .video {
+        flex: 300px;
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+          p {
+            font-size: $fs-400;
+            width: 100%;
+            font-weight: $fw-500;
+            color: $color-white;
+            transition: all 0.2s ease-in-out;
+            padding-top: 15px;
+            margin-top: 10px;
+          }
+
+          &:hover {
+            p {
+              color: $color-red;
+            }
+          }
+
+          .img_holder {
+            position: relative;
+
+            .play_button {
+              position: absolute;
+              inset: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              span {
+                width: 75px;
+                height: 75px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $color-red;
+                font-size: 35px;
+                color: $color-white;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                  transform: scale(1.2);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .play_button {
+    span {
+      transform: scale(0.8);
+
+      &:hover {
+        transform: scale(1) !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .play_button {
+    span {
+      transform: scale(0.6);
+
+      &:hover {
+        transform: scale(0.8) !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .play_button {
+    span {
+      transform: scale(0.4);
+
+      &:hover {
+        transform: scale(0.5) !important;
+      }
+    }
+  }
+}

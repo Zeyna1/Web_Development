@@ -1,0 +1,51 @@
+.add_card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+  .cost {
+    .deleted {
+      text-decoration: line-through;
+      text-decoration-color: $color-red;
+    }
+
+    span:not(.deleted) {
+      font-weight: $fw-700;
+      color: $color-red;
+    }
+  }
+}
+
+.product_tags {
+  margin-bottom: 10px;
+  ul {
+    display: flex;
+    font-size: $fs-100;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+
+    li {
+      padding: 1px 6px;
+      border-radius: 5px;
+      font-weight: $fw-500;
+      border: 1px solid;
+    }
+
+    .tag-interest {
+      color: $color-red;
+    }
+
+    .tag-popular {
+      color: $color-green;
+    }
+
+    .tag-comission {
+      color: $color-light_blue;
+    }
+
+    .tag-free_cargo {
+      @extend .tag-comission;
+    }
+  }
+}

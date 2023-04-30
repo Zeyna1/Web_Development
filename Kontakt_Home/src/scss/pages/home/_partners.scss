@@ -1,0 +1,38 @@
+#partners {
+  margin: 50px 0;
+
+  .slider_partners {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10px;
+    border: 2px solid $color-light_gray;
+
+    .img_holder {
+      flex: calc(100% / 7);
+      padding: 0 15px;
+
+      .img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .img_holder {
+    padding: 0 10px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .img_holder {
+    padding: 0 5px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .img_holder {
+    padding: 0 2px !important;
+  }
+}

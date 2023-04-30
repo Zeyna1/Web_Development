@@ -1,0 +1,43 @@
+.button {
+  font-weight: $fw-700;
+  color: #fff;
+  background-color: $color-green;
+  width: 120px;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: $fs-500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #7ea82b;
+  }
+}
+
+.explore_button {
+  color: $color-black1;
+  font-weight: $fw-700;
+  background-color: $color-light_gray2;
+  padding: 10px;
+  width: 100%;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    background-color: $color-red;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  a {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    font-size: $fs-400;
+    transition: all 0.25s ease-in-out;
+  }
+}
