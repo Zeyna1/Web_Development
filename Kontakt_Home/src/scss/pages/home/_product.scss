@@ -25,7 +25,6 @@
 
           &:hover {
             box-shadow: 2px 3.5px 24px 0 rgba(18, 16, 11, 0.31);
-            transform: scale(1.005);
             cursor: pointer;
 
             .product_pull_info {
@@ -37,8 +36,6 @@
             width: 100%;
             padding: 10px;
             display: flex;
-            z-index: -1;
-            position: relative;
             flex-direction: column;
             border: 1px solid $color-white;
 

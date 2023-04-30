@@ -82,10 +82,10 @@
 @media (max-width: 992px) {
   .play_button {
     span {
-      transform: scale(0.8);
+      transform: scale(0.6);
 
       &:hover {
-        transform: scale(1) !important;
+        transform: scale(0.7) !important;
       }
     }
   }
@@ -94,10 +94,10 @@
 @media (max-width: 768px) {
   .play_button {
     span {
-      transform: scale(0.6);
+      transform: scale(0.5);
 
       &:hover {
-        transform: scale(0.8) !important;
+        transform: scale(0.6) !important;
       }
     }
   }
