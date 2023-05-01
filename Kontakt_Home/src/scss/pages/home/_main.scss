@@ -230,6 +230,9 @@
               }
 
               span {
+                &:hover::after {
+                  background-color: $color-red !important;
+                }
                 &::after {
                   content: "";
                   width: 10px;
@@ -245,19 +248,19 @@
       }
     }
   }
+}
 
-  .adds {
-    display: flex;
-    gap: 10px;
+.adds {
+  display: flex;
+  gap: 10px;
 
-    .add {
-      flex: calc(100% - 10px);
+  .add {
+    flex: calc(100% - 10px);
 
-      a {
-        display: inline-block;
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        max-height: 180px;
-      }
+    a {
+      display: inline-block;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      max-height: 180px;
     }
   }
 }

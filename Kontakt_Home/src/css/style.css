@@ -778,6 +778,9 @@ footer .copy_right {
 #main .row .row .prod_info .card .offer_card .dots button:first-child span::after {
   background-color: #ff023c !important;
 }
+#main .row .row .prod_info .card .offer_card .dots span:hover::after, #main .row .row .prod_info .card .offer_card .dots button:first-child span:hover::after {
+  background-color: #ff023c !important;
+}
 #main .row .row .prod_info .card .offer_card .dots span::after, #main .row .row .prod_info .card .offer_card .dots button:first-child span::after {
   content: "";
   width: 10px;
@@ -786,14 +789,15 @@ footer .copy_right {
   background-color: #253444;
   border-radius: 50%;
 }
-#main .adds {
+
+.adds {
   display: flex;
   gap: 10px;
 }
-#main .adds .add {
+.adds .add {
   flex: calc(100% - 10px);
 }
-#main .adds .add a {
+.adds .add a {
   display: inline-block;
   border: 1px solid rgba(0, 0, 0, 0.08);
   max-height: 180px;
