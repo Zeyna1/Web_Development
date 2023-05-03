@@ -1,0 +1,83 @@
+@use "../../utils/_variable.sass" as * 
+
+#rating
+    padding: 48px 0
+    background-color: $color-white
+
+    .head
+        display: flex
+        gap: 0.3rem
+        color: $color-gray
+        margin: auto
+        margin-bottom: 50px
+
+        &__star
+            img
+                object-fit: contain
+
+    .row
+        flex-wrap: nowrap
+
+        .reward
+            display: flex
+            gap: 0.6rem
+
+            img
+                object-fit: contain
+
+            a
+                display: flex
+                flex-direction: column
+                span
+                    font-size: $fs-12
+                    color: $color-dark_gray
+
+            &__info
+                display: flex
+                align-items: center
+                flex-direction: column
+                font-size: $fs-12
+                &__img
+                    width: 101px
+                    height: 24px
+                &__title
+                    color: $color-black
+                &__desc
+                    color: $color-gray
+
+            .trust
+                max-width: 120px
+                &__trust_logo
+                    width: 55%
+                    border: none
+                    margin: 0 0 8px
+
+    .responsive
+        display: none
+        .main
+            margin-bottom: 28px
+            justify-content: center
+            &__info
+                font-size: $fs-14 !important
+                line-height: 1.6
+                font-weight: $fw-500
+                &__img
+                    width: 125px
+                    height: 25px
+        .rewards
+            display: flex
+            justify-content: space-between !important
+            width: 100%
+
+            .reward
+                div:has(img)
+                    display: none
+
+@media ( max-width:  768.001px)
+#rating
+    .non-resp
+        display: none !important
+
+    .responsive
+        display: flex !important
+        flex-direction: column

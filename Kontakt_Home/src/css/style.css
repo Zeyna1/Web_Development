@@ -983,12 +983,17 @@ footer .copy_right {
 }
 #social .row .videos {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 #social .row .videos .video {
-  flex: 300px;
+  flex: calc(25% - 30px);
   display: flex;
   flex-wrap: wrap;
+}
+#social .row .videos .video a {
+  width: 100%;
+  display: inline-block;
 }
 #social .row .videos .video a p {
   font-size: 0.875rem;
@@ -1029,27 +1034,17 @@ footer .copy_right {
 }
 
 @media (max-width: 992px) {
-  .play_button span, .play_button #main .row .row .prod_info .card .offer_card .dots button:first-child span::after, #main .row .row .prod_info .card .offer_card .dots button:first-child .play_button span::after {
-    transform: scale(0.6);
-  }
-  .play_button span:hover, .play_button #main .row .row .prod_info .card .offer_card .dots button:first-child span:hover::after, #main .row .row .prod_info .card .offer_card .dots button:first-child .play_button span:hover::after {
-    transform: scale(0.7) !important;
+  .video {
+    flex: calc(50% - 20px) !important;
+    margin-bottom: 20px;
+    text-align: center;
   }
 }
 @media (max-width: 768px) {
-  .play_button span, .play_button #main .row .row .prod_info .card .offer_card .dots button:first-child span::after, #main .row .row .prod_info .card .offer_card .dots button:first-child .play_button span::after {
-    transform: scale(0.5);
-  }
-  .play_button span:hover, .play_button #main .row .row .prod_info .card .offer_card .dots button:first-child span:hover::after, #main .row .row .prod_info .card .offer_card .dots button:first-child .play_button span:hover::after {
-    transform: scale(0.6) !important;
-  }
-}
-@media (max-width: 575px) {
-  .play_button span, .play_button #main .row .row .prod_info .card .offer_card .dots button:first-child span::after, #main .row .row .prod_info .card .offer_card .dots button:first-child .play_button span::after {
-    transform: scale(0.4);
-  }
-  .play_button span:hover, .play_button #main .row .row .prod_info .card .offer_card .dots button:first-child span:hover::after, #main .row .row .prod_info .card .offer_card .dots button:first-child .play_button span:hover::after {
-    transform: scale(0.5) !important;
+  .video {
+    flex: calc(100% - 20px) !important;
+    margin-bottom: 20px;
+    text-align: center;
   }
 }
 #partners {

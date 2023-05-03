@@ -1,0 +1,59 @@
+@use '../../utils/variable' as *
+@use '../../utils/extend' as *
+
+.title
+    @extend %title
+
+.row
+    row-gap: 5rem
+    align-items: stretch
+    flex-wrap: wrap
+    @media ( max-width: 768.001px )
+        [class*="col-"]
+            width: 50%
+            flex: 50%
+
+    @media ( max-width: 575.001px )
+        [class*="col-"]
+            width: 100%
+            flex: 100%
+
+    .card
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+        gap: 0.6rem
+        flex-direction: column
+        justify-content: space-between
+        &__img
+            display: inline-block
+            width: 100%
+            border-radius: 8px
+            overflow: hidden
+        &__name
+            p
+                font-weight: 300
+            h3:hover
+                color: $color-black
+                text-decoration: underline
+
+            &__author
+                margin-top: 10px
+                display: flex
+                justify-content: space-between
+                color: $color-light_gray
+                a:hover
+                    color: $color-black
+                    text-decoration: underline
+
+    .button_flex
+        display: flex
+        justify-content: center
+        .button
+            padding: 14px 36px
+            border: 1px solid
+            border-radius: 8px
+            color: $color-gray
+            transition: .2s ease-in-out
+            &:hover
+                color: $color-black

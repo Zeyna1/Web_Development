@@ -1,0 +1,157 @@
+@use '../utils/variable' as *
+@use '../utils/extend' as *
+
+%transition_button
+    transition: .2s ease-in-out
+
+header
+    padding: 8px 0
+    color: $color-white
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    height: 512px
+
+    @media ( max-width: 1025px )
+        height: auto
+        padding-bottom: 0
+        border-bottom: 10px
+
+    nav
+        a
+            display: inline-block
+            position: relative
+            font-size: $fs-14
+
+            &:hover::after
+                width: 100%
+            &::after
+                content: ''
+                position: absolute
+                width: 0
+                height: 1px
+                bottom: 0
+                left: 0
+                background-color: $color-white
+                @extend %transition_button
+
+        .logo
+            margin-right: 50px
+            @media (max-width:575.001px)
+                margin: 0
+            img
+                object-fit: contain
+        .links
+            display: flex
+            gap: 30px
+            margin-right: auto
+            align-items: center
+
+            @media (max-width:768px)
+                display: none
+
+        .right_side
+            display: flex
+            align-items: center
+
+            &__lang
+                padding: 20px 0
+                position: relative
+
+                @media (max-width:768.001px)
+                    display: none
+                &:hover
+                    .right_side__lang__tooltip
+                        display: block
+
+                &__img_holder
+                    position: relative
+                    padding-right: 2.5rem
+                    &::after
+                        content: ''
+                        left: 40%
+                        top: calc( 50% - 5px )
+                        position: absolute
+                        width: 1px
+                        height: 10px
+                        background: $color-white
+                        opacity: .2
+                        margin-left: 1rem
+
+                &__tooltip
+                    position: absolute
+                    top: 60px
+                    left: -50%
+                    right: auto
+                    background-color: $color-white
+                    border-radius: 8px
+                    display: none
+
+                    ul
+                        padding: 13px 7px
+
+                        .active
+                            color: $color-primary
+
+                        li
+
+                            padding: 12px 14px
+                            a
+                                font-weight: $fw-700
+                                color: $color-black
+
+                                &:hover
+                                    color: $color-primary
+
+                    &::after
+                        content: ''
+                        background-size: contain
+                        background-image: url("https://pickvisa.com/website/v2/icons/header/tooltip_arrow.svg")
+                        top: -6px
+                        width: 16px
+                        height: 16px
+                        position: absolute
+                        left: calc((100% - 61px) / 2)
+
+            &__login_signup
+                display: flex
+                align-items: center
+                gap: 1.5rem
+
+                @media (max-width:768.001px)
+                    a
+                        display: none
+
+                button
+                    color: $color-white
+                    padding: 8px 20px
+                    border: 1px solid
+                    border-radius: 5px
+                    @extend %transition_button
+
+                    &:hover
+                        background: rgba(255,255,255,.2)
+                        cursor: pointer
+
+                &__icon
+                    border: none !important
+                    font-size: 22px
+                    padding: 0 !important
+                    display: none
+
+                    @media (max-width:768.001px)
+                        display: inline-block
+
+    #apply
+        margin-top: 64px
+
+        h1
+            margin-bottom: 0 !important
+            @media (min-width: 992px)
+                margin-bottom: 28px
+                max-width: 50%
+
+        form
+            @extend %form
+            @media ( max-width: 1025px )
+                display: none

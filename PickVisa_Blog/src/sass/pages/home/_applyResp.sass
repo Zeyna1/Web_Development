@@ -1,0 +1,22 @@
+@use '../../utils/variable' as *
+@use '../../utils/extend' as *
+
+#apply_resp
+    display: none
+    padding-bottom: 40px
+    form
+        @extend %form
+
+    @media (max-width: 1025px)
+        box-shadow: 0 15px 35px rgba(21,59,59,.1)
+        display: block
+        height: 273px
+
+        form
+            margin: 0 15px
+    @media (max-width: 992.001px)
+        form
+            flex-direction: column
+    @media (max-width: 768.001px)
+        form
+            margin: 0

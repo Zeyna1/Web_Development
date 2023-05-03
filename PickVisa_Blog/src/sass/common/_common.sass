@@ -1,0 +1,62 @@
+@use "./../utils/_variable.sass" as * 
+.container
+  padding: 0 15px
+  margin: 0 auto
+
+html
+  font-family: $default_ff
+
+body
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+  &::-webkit-scrollbar-track
+    background: none
+
+  &::-webkit-scrollbar-thumb
+
+    background-color: $color-white
+    border-radius: 8px
+
+a
+  text-decoration: none
+  color: inherit
+
+img
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+button
+  border: none
+  background-color: transparent
+  cursor: pointer
+
+input
+  border: none
+  outline: none
+  width: 100%
+  height: 100%
+
+.row
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+
+@media (min-width: 575px)
+  .container
+    max-width: 540px
+
+@media (min-width: 768px)
+  .container
+    max-width: 720px
+
+@media (min-width: 992px)
+  .container
+    max-width: 960px
+
+@media (min-width: 1200px)
+  .container
+    max-width: 1140px

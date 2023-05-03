@@ -1,0 +1,65 @@
+@use "../../utils/_variable.sass" as * 
+@use "../../utils/_extend.sass" as * 
+
+#info
+    background-color: $color-dark_blue
+    margin-top: 230px
+    color: $color-white
+    padding: 84px 0
+    position: relative
+
+    h1
+        margin-bottom: 40px
+        position: relative
+
+        &::after
+            content: ''
+            position: absolute
+            width: 300px
+            height: 300px
+            background-repeat: no-repeat
+            right: -260px
+            background-image: url('https://static.pickvisa.com/website/v2/images/arrow_vector.svg')
+    .button
+        @extend %button
+        width: auto
+
+    .img-flex
+        display: flex
+        justify-content: flex-end
+
+        width: 100%
+        position: absolute
+        bottom: 0
+        left: 0
+
+        &__img
+            background-repeat: no-repeat
+            // background-position-x: 120%
+            width: 450px
+            height: 428px
+            background-image: url("../../src/assets/img/cta.png")
+
+            img
+                object-fit: cover
+
+@media ( max-width: 992.001px )
+    #info
+        .row
+            gap: 25rem
+            flex-direction: column
+            flex-wrap: wrap
+            h1::after
+                display: none
+            button
+                width: 100% !important
+                display: inline-block
+
+            .img-flex
+                justify-content: center !important
+
+                &__img
+                    width: 510px
+
+        [class*="col-"]
+            width: 100%
