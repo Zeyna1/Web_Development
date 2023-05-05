@@ -1,0 +1,8 @@
+@use "./variable" as *;
+@use "./mixin" as *;
+
+%link_hover_after {
+  @include position(absolute, $bottom: -3px, $left: 0);
+  @include before_after("", 0, 2px);
+  transition: $transition_links;
+}

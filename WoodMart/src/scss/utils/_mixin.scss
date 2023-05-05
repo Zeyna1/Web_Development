@@ -1,0 +1,45 @@
+@use "./variable" as *;
+
+$count: 0;
+$col-width: calc(100% / 12);
+@while $count < 13 {
+  .col-#{$count} {
+    flex: ($count * $col-width);
+    width: ($count * $col-width);
+  }
+
+  $count: $count + 1;
+}
+
+@mixin flexbox($align, $justify, $wrap, $gap, $flex: null, $direction: null) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+  gap: $gap;
+  flex: $flex;
+}
+
+@mixin position(
+  $pos,
+  $inset: null,
+  $top: null,
+  $left: null,
+  $right: null,
+  $bottom: null
+) {
+  position: $pos;
+  inset: $inset;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+@mixin before_after($content, $width, $height, $bg-color: null) {
+  content: $content;
+  width: $width;
+  height: $height;
+  background-color: $bg-color;
+}

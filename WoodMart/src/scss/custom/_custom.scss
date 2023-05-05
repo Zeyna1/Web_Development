@@ -1,0 +1,49 @@
+@use "./../utils/_variable" as *;
+@use "../utils/mixin";
+.padding-10 {
+  padding: 0 10px;
+}
+.padding-15 {
+  padding: 0 15px;
+}
+
+// :root {
+//   --col_width: 8.333333333333333%;
+// }
+
+// .col-1 {
+//   width: var(--col_width);
+// }
+// .col-2 {
+//   width: calc(2 * var(--col_width));
+// }
+// .col-3 {
+//   width: calc(3 * var(--col_width));
+// }
+// .col-4 {
+//   width: calc(4 * var(--col_width));
+// }
+// .col-5 {
+//   width: calc(5 * var(--col_width));
+// }
+// .col-6 {
+//   width: calc(6 * var(--col_width));
+// }
+// .col-7 {
+//   width: calc(7 * var(--col_width));
+// }
+// .col-8 {
+//   width: calc(8 * var(--col_width));
+// }
+// .col-9 {
+//   width: calc(9 * var(--col_width));
+// }
+// .col-10 {
+//   width: calc(10 * var(--col_width));
+// }
+// .col-11 {
+//   width: calc(11 * var(--col_width));
+// }
+// .col-12 {
+//   width: 100%;
+// }
