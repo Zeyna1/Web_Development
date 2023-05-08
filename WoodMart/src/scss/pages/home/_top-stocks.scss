@@ -1,0 +1,136 @@
+@use "./../../utils/_variable.scss" as *;
+@use "./../../utils/mixin" as *;
+
+%inner {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+
+%img {
+  width: 100%;
+  overflow: hidden;
+
+  a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    img {
+      object-fit: cover;
+      transition: $transition_transform;
+    }
+  }
+}
+
+%content {
+  width: 48%;
+  @media (max-width: 574.999px) {
+    width: 60%;
+  }
+  @media (max-width: 389.999px) {
+    width: 100%;
+  }
+  h1 {
+    font-size: map-get($map: $font-sizes, $key: fs-900);
+    font-weight: 400;
+  }
+
+  p {
+    color: map-get($map: $colors, $key: gray);
+    font-size: map-get($map: $font-sizes, $key: fs-300);
+    font-weight: 300;
+  }
+}
+
+#top-stocks {
+  .row {
+    @include flexbox(stretch, space-between, wrap, 30px);
+    .col-6 {
+      flex: calc(50% - 15px);
+    }
+    .card {
+      @include flexbox(stretch, space-between, wrap, 0);
+      overflow: hidden;
+
+      &:hover {
+        img {
+          transform: scale(1.11);
+        }
+      }
+
+      &__inner {
+        @extend %inner;
+        img {
+          transition: $transition_transform;
+        }
+        &__outter {
+          @include position(absolute, 0);
+          padding: 30px;
+          &__content {
+            @extend %content;
+
+            @include flexbox(
+              baseline,
+              flex-start,
+              nowrap,
+              0.6rem,
+              $direction: column
+            );
+
+            &__cost {
+              font-size: map-get($map: $font-sizes, $key: fs-500);
+              color: map-get($map: $colors, $key: red);
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+
+    .row {
+      .row {
+        h1 {
+          font-size: map-get($map: $font-sizes, $key: fs-600);
+        }
+        a {
+          display: flex;
+          position: relative;
+          font-size: map-get($map: $font-sizes, $key: fs-200);
+          color: map-get($map: $colors, $key: black-dark);
+          font-weight: 300;
+
+          &:hover::after {
+            width: 100%;
+          }
+
+          &::after {
+            transition: $transition_links;
+            @include position(absolute, $bottom: 0, $left: 0);
+            @include before_after(
+              "",
+              0,
+              2px,
+              map-get($map: $colors, $key: red)
+            );
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #top-stocks {
+    .row {
+      flex-direction: column;
+      .col-6 {
+        width: 100%;
+        flex: 100%;
+
+        .card {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

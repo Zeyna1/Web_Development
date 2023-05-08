@@ -1,16 +1,5 @@
 @use "./variable" as *;
 
-$count: 0;
-$col-width: calc(100% / 12);
-@while $count < 13 {
-  .col-#{$count} {
-    flex: ($count * $col-width);
-    width: ($count * $col-width);
-  }
-
-  $count: $count + 1;
-}
-
 @mixin flexbox($align, $justify, $wrap, $gap, $flex: null, $direction: null) {
   display: flex;
   flex-direction: $direction;

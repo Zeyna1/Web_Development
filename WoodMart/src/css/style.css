@@ -1,4 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap");
+#bestOfWeek .row .row .heading__title::after, header .nav-main .row .account__lr a::after, header .nav-bottom .nav_list__inner li a span::after {
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  content: "";
+  width: 0;
+  height: 2px;
+  transition: 0.3s ease-in-out;
+}
+
 .col-0 {
   flex: 0%;
   width: 0%;
@@ -64,14 +74,19 @@
   width: 100%;
 }
 
-header .nav-main .row .account__lr a::after, header .nav-bottom .nav_list__inner li a span::after {
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  content: "";
-  width: 0;
-  height: 2px;
-  transition: 0.3s ease-in-out;
+.card {
+  height: 100%;
+  width: 100%;
+}
+
+.card__inner {
+  height: 100%;
+  width: 100%;
+}
+
+.card__inner__img {
+  height: 100%;
+  width: 100%;
 }
 
 *,
@@ -154,7 +169,7 @@ table {
 }
 
 html {
-  font-family: Lato, Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -184,6 +199,7 @@ img {
 button {
   border: none;
   background-color: transparent;
+  color: inherit;
   cursor: pointer;
 }
 
@@ -192,6 +208,10 @@ input {
   outline: none;
   width: 100%;
   height: 100%;
+}
+
+section {
+  margin: 50px 0;
 }
 
 ul {
@@ -210,19 +230,19 @@ ul {
   gap: 0;
 }
 
-@media (min-width: 575px) {
+@media (max-width: 991.999px) {
   .container {
-    max-width: 540px;
+    max-width: 960px;
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 767.999px) {
   .container {
     max-width: 720px;
   }
 }
-@media (min-width: 992px) {
+@media (max-width: 574.999px) {
   .container {
-    max-width: 960px;
+    max-width: 540px;
   }
 }
 @media (min-width: 1200px) {
@@ -608,6 +628,468 @@ header .nav-bottom .right_links__list li:hover {
 @media (max-width: 480.001px) {
   .resp .menu-btn__sidebar__menu {
     display: none !important;
+  }
+}
+#top-stocks .row .card__inner {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+
+#top-stocks .row .card__inner__outter__content {
+  width: 48%;
+}
+@media (max-width: 574.999px) {
+  #top-stocks .row .card__inner__outter__content {
+    width: 60%;
+  }
+}
+@media (max-width: 389.999px) {
+  #top-stocks .row .card__inner__outter__content {
+    width: 100%;
+  }
+}
+#top-stocks .row .card__inner__outter__content h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+#top-stocks .row .card__inner__outter__content p {
+  color: #777;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+#top-stocks .row {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+#top-stocks .row .col-6 {
+  flex: calc(50% - 15px);
+}
+#top-stocks .row .card {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0;
+  overflow: hidden;
+}
+#top-stocks .row .card:hover img {
+  transform: scale(1.11);
+}
+#top-stocks .row .card__inner img {
+  transition: all 0.5s cubic-bezier(0, 0, 0.44, 1.18);
+}
+#top-stocks .row .card__inner__outter {
+  position: absolute;
+  inset: 0;
+  padding: 30px;
+}
+#top-stocks .row .card__inner__outter__content {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 0.6rem;
+}
+#top-stocks .row .card__inner__outter__content__cost {
+  font-size: 1.375rem;
+  color: #da3340;
+  font-weight: 600;
+}
+#top-stocks .row .row .row h1 {
+  font-size: 1.5rem;
+}
+#top-stocks .row .row .row a {
+  display: flex;
+  position: relative;
+  font-size: 0.8125rem;
+  color: #000;
+  font-weight: 300;
+}
+#top-stocks .row .row .row a:hover::after {
+  width: 100%;
+}
+#top-stocks .row .row .row a::after {
+  transition: 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #da3340;
+}
+
+@media (max-width: 1200px) {
+  #top-stocks .row {
+    flex-direction: column;
+  }
+  #top-stocks .row .col-6 {
+    width: 100%;
+    flex: 100%;
+  }
+  #top-stocks .row .col-6 .card {
+    width: 100%;
+  }
+}
+#products .row {
+  row-gap: 2rem;
+}
+#products .row .row {
+  align-items: stretch;
+}
+#products .row .row .img img {
+  object-fit: contain;
+}
+#products .row .row .info {
+  padding: 10px;
+  height: 100%;
+}
+#products .row .row .info ul {
+  flex-wrap: wrap;
+  color: #777;
+  font-size: 0.875rem;
+  justify-content: space-between;
+  height: 100%;
+}
+#products .row .row .info ul li {
+  transition: 0.3s ease-in-out;
+  font-weight: 300;
+  flex: 100%;
+}
+#products .row .row .info ul li:first-child {
+  color: #000;
+  font-weight: 700;
+}
+#products .row .row .info ul li:hover {
+  color: #da3340;
+}
+@media (min-width: 768px) and (max-width: 1199.999px) {
+  #products .col-3 {
+    width: 50%;
+    flex: 50%;
+  }
+}
+@media (max-width: 767.999px) {
+  #products .col-3 {
+    width: 100%;
+    flex: 100%;
+  }
+  #products .col-3 .row {
+    justify-content: center;
+  }
+  #products .col-3 .row .img {
+    height: 200px;
+  }
+  #products .col-3 .row .col-8 {
+    width: 100%;
+    flex: 100%;
+  }
+  #products .col-3 .row .col-8 ul {
+    gap: 1rem;
+    font-size: 1.375rem;
+  }
+  #products .col-3 .row .col-8 ul li {
+    text-align: center;
+  }
+}
+
+#bestOfWeek {
+  margin: 200px 0;
+}
+#bestOfWeek:last-child .row .col-3 {
+  order: 2;
+}
+#bestOfWeek:last-child .row .col-9 {
+  order: 1;
+}
+#bestOfWeek .row {
+  align-items: stretch;
+  gap: 30px;
+}
+#bestOfWeek .row .col-3 {
+  flex: calc(25% - 15px);
+}
+#bestOfWeek .row .col-3 .row {
+  gap: 30px;
+}
+#bestOfWeek .row .col-9 {
+  flex: calc(75% - 15px);
+}
+#bestOfWeek .row .row {
+  gap: 5px;
+}
+#bestOfWeek .row .row i:hover {
+  color: #da3340;
+}
+#bestOfWeek .row .row .banner {
+  position: relative;
+  cursor: pointer;
+}
+#bestOfWeek .row .row .banner:hover img {
+  transform: scale(1.11);
+}
+#bestOfWeek .row .row .banner__img {
+  overflow: hidden;
+}
+#bestOfWeek .row .row .banner__img img {
+  transition: all 0.5s cubic-bezier(0, 0, 0.44, 1.18);
+}
+#bestOfWeek .row .row .banner__content {
+  padding: 30px;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+#bestOfWeek .row .row .banner__content__inner {
+  text-align: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+#bestOfWeek .row .row .banner__content__inner h4 {
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+#bestOfWeek .row .row .banner__content__inner span {
+  font-weight: 300;
+}
+#bestOfWeek .row .row .banner__content__inner .cost {
+  font-weight: 500 !important;
+}
+#bestOfWeek .row .row .heading {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 3rem;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: #2d2a2a;
+  border-bottom: 2px solid #eaeaea;
+}
+#bestOfWeek .row .row .heading__title {
+  font-size: 1.375rem;
+  position: relative;
+}
+#bestOfWeek .row .row .heading__title::after {
+  bottom: -1px;
+  width: 100%;
+  background-color: #da3340;
+}
+#bestOfWeek .row .row .heading__link__list {
+  gap: 2rem;
+}
+#bestOfWeek .row .row .heading__link__list li {
+  color: rgba(45, 42, 42, 0.8);
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+}
+#bestOfWeek .row .row .heading__link__list li:first-child {
+  color: #da3340 !important;
+  opacity: 1;
+}
+#bestOfWeek .row .row .heading__link__list li:hover {
+  color: #2d2a2a;
+}
+#bestOfWeek .row .row .heading__link__list li button {
+  text-transform: uppercase;
+}
+#bestOfWeek .row .row .products {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+#bestOfWeek .row .row .products__outter {
+  flex: calc(33.3333333333% - 30px);
+  transition: all 0.5s cubic-bezier(0, 0, 0.44, 1.18);
+  position: relative;
+  cursor: pointer;
+}
+#bestOfWeek .row .row .products__outter::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin-bottom: -194px;
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0, 0, 0.44, 1.18);
+}
+#bestOfWeek .row .row .products__outter:hover::after {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1490196078);
+}
+#bestOfWeek .row .row .products__outter:hover .products__outter__product__info__pull {
+  visibility: visible;
+  opacity: 1;
+}
+#bestOfWeek .row .row .products__outter:hover .products__outter__product__top__shuffle {
+  transform: translateY(0);
+}
+#bestOfWeek .row .row .products__outter:hover .products__outter__product__info__cost__inner {
+  transform: translateY(-200%);
+}
+#bestOfWeek .row .row .products__outter__product {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  width: 100%;
+  padding: 20px;
+}
+#bestOfWeek .row .row .products__outter__product__top {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+#bestOfWeek .row .row .products__outter__product__top__shuffle {
+  transform: translateY(100%);
+  transition: all 0.5s cubic-bezier(0, 0, 0.44, 1.18);
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0;
+  background-color: #fff;
+  padding: 10px 5px;
+  font-size: 20px;
+  width: 100%;
+  justify-content: flex-end;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#bestOfWeek .row .row .products__outter__product__top__shuffle button {
+  padding: 0 10px;
+}
+#bestOfWeek .row .row .products__outter__product__info {
+  position: relative;
+  font-size: 0.875rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+}
+#bestOfWeek .row .row .products__outter__product__info h3 {
+  color: #333;
+  font-weight: 500;
+}
+#bestOfWeek .row .row .products__outter__product__info p {
+  color: #9e9e9e;
+}
+#bestOfWeek .row .row .products__outter__product__info__cost {
+  color: #da3340;
+  font-weight: 600;
+  overflow: hidden;
+  padding: 10px 15px;
+}
+#bestOfWeek .row .row .products__outter__product__info__cost__inner {
+  transform: translateY(0);
+  transition: all 0.5s cubic-bezier(0, 0, 0.44, 1.18);
+}
+#bestOfWeek .row .row .products__outter__product__info__pull {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 12px;
+  padding-top: 0;
+  visibility: hidden;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0, 0, 0.44, 1.18);
+  font-size: 0.875rem;
+  text-align: center;
+  z-index: 2;
+}
+#bestOfWeek .row .row .products__outter__product__info__pull p {
+  color: #9e9e9e;
+}
+#bestOfWeek .row .row .products__outter__product__info__pull__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0;
+  font-size: 18px;
+  width: 100%;
+}
+#bestOfWeek .row .row .products__outter__product__info__pull__buttons .add_to_card {
+  text-transform: uppercase;
+  background-color: #da3340;
+  color: #fff;
+  font-size: 0.75rem;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+  height: 40px;
+  width: 110px;
+  font-weight: 500;
+}
+#bestOfWeek .row .row .products__outter__product__info__pull__buttons .add_to_card span {
+  display: inline-block;
+  padding: 10px 14px;
+  flex: 100%;
+  transition: all 0.5s cubic-bezier(0, 0, 0.44, 1.18);
+}
+#bestOfWeek .row .row .products__outter__product__info__pull__buttons .add_to_card span i {
+  font-size: 18px;
+  color: #fff;
+}
+#bestOfWeek .row .row .products__outter__product__info__pull__buttons .add_to_card:hover {
+  opacity: 0.8;
+}
+#bestOfWeek .row .row .products__outter__product__info__pull__buttons .add_to_card:hover span {
+  transform: translateY(-36px);
+}
+@media (max-width: 991.999px) {
+  #bestOfWeek .row .col-3,
+  #bestOfWeek .row .col-9 {
+    width: 100%;
+    flex: 100%;
+  }
+  #bestOfWeek .row .col-3 {
+    order: 2;
+  }
+  #bestOfWeek .row .col-9 {
+    order: 1;
+  }
+}
+@media (max-width: 767.999px) {
+  #bestOfWeek .row .col-3,
+  #bestOfWeek .row .col-9 {
+    width: 100%;
+    flex: 100%;
+  }
+  #bestOfWeek .row .col-3 {
+    order: 2;
+  }
+  #bestOfWeek .row .col-9 {
+    order: 1;
+  }
+  #bestOfWeek .row .col-9 .products__outter {
+    width: 50%;
+    flex: calc(50% - 30px);
   }
 }
 
